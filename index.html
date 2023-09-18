@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
+    <title>Starlink</title>
+  </head>
+
+  <body>
+
+    <div class="side-bar" id="sideMenu">
+      <a class="close-button" id="closeMenuBtn">
+        <img src="./assets/Close_Menu.svg" alt="" />
+      </a>
+
+      <div class="side-links">
+        <a href="" class="side-link">MAPA DE DISPONIBILIDAD</a>
+        <hr>
+        <a href="" class="side-link">RECURSOS</a>
+        <hr>
+        <a href="" class="side-link">ESPECIFICACIONES</a>
+        <hr>
+        <a href="" class="side-link">MX</a>
+        <hr>
+        <a href="" class="side-link">INICIAR SESIÓN</a>
+        <hr>
+      </div>
+    </div>
+
+    <div class="landpage" id="landpage">
+      <div class="nav-menu">
+        <div class="nav-bar">
+          <p class="logo">STARLINK</p>
+
+          <div class="nav-links">
+            <a href="#" class="underlined-link">RESIDENCIAL</a>
+            <a href="#">EMPRESAS</a>
+            <a href="#">ITINERANTE</a>
+            <a href="#">MOVILIDAD</a>
+            <a href="#">MARÍTIMO</a>
+            <a href="#">AVIACIÓN</a>
+            <a href="#">IOT</a>
+            <a href="#">TECNOLOGÍA</a>
+            <a href="#">ASISTENCIA</a>
+            <a class="hamburguer" id="sideMenuListener">
+              <img src="./assets/Menu_Hamburger.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="description">
+          <h1 class="title-description">INTERNET STARLINK</h1>
+          <!-- <br> -->
+          <div class="text-description">
+            <p>
+              Internet de banda ancha de alta velocidad para lugares remotos y
+              rurales de todo el
+              <br />mundo. Por $1,100/mes con un pago único inicial de $8,300
+              para el equipo. Las <br />velocidades promedio son de 130 Mbps,
+              oscilando entre 50 - 200 Mbps dependiendo <br />de su ubicación.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="availability-box">
+        <div class="son">
+          <p id="cityStatus" class="location-invalid-text"></p>
+          <div class="location-form">
+            <input
+              type="text"
+              name=""
+              placeholder="DIRECCIÓN DE SERVICIO"
+              id="cityInput"
+            />
+            <button id="consultButton" class="consult-button">CONSULTAR DISPONIBILIDAD</button>
+          </div>
+
+          <div class="terms" style="text-align: center">
+            <a id="mapListener">
+              <p class="availability-text">VER MAPA DE DISPONIBILIDAD ></p></a
+            >
+            <p class="policy-text">
+              Al hacer clic en CONSULTAR DISPONIBILIDAD, acepta nuestra
+              <a href="https://www.starlink.com/legal">Política de privacidad</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container" id="mapContainer">
+      <div id="map"></div>
+    </div>
+
+    <div class="features">
+      <div class="left-feature">
+        <img src="./assets/dish.png" alt="" width="683px" height="350px" />
+        <div class="info">
+          <h1>
+            STREAMING,<br />
+            VIDEOLLAMADAS, <br />JUEGOS EN LÍNEA Y <br />MUCHO MÁS
+          </h1>
+
+          <div class="description-box">
+            <p>
+              Starlink le permite a usuarios gozar de una conexión continua, y
+              de realizar actividades que históricamente no han sido posibles.
+            </p>
+            <p>
+              El servicio de alta velocidad y baja latencia de Starlink es
+              posible gracias a la constelación más grande de satélites que
+              operan en una órbita baja alrededor de la Tierra.
+            </p>
+          </div>
+
+          <button>OBTENER MÁS INFORMACIÓN</button>
+        </div>
+      </div>
+
+      <div class="right-feature">
+        <div class="info">
+          <h1>
+            AUTOINSTALACIÓN<br />
+            SENCILLA
+          </h1>
+
+          <div class="description-box">
+            <p>
+              Su kit de Starlink llega con todo lo necesario para obtener
+              conectividad en cuestión de minutos, incluyendo la antena
+              Starlink, router Wi-Fi, cables y base.
+            </p>
+            <p>
+              Haga clic <a href="#">aquí</a> para ver las especificaciones
+              técnicas de Starlink.
+            </p>
+          </div>
+
+          <button>VER INSTALACIÓN</button>
+        </div>
+        <img src="./assets/thing.png" alt="" width="683px" height="350px" />
+      </div>
+
+      <div class="left-feature">
+        <img src="./assets/mountain.png" alt="" width="683px" height="350px" />
+        <div class="info">
+          <h1>
+            SIN CONTRATOS,<br />
+            PRUEBA DURANTE<br />30 DÍAS<br />
+          </h1>
+
+          <div class="description-box">
+            <p>
+              Los contratos a largo plazo impiden a ambas partes hacer cambios
+              razonables en caso de ser necesarios.
+            </p>
+            <p>
+              Starlink plantea un trato beneficioso para ambas partes. Starlink
+              puede ajustar las condiciones y los precios del servicio según sea
+              necesario, y los clientes pueden cancelar en cualquier momento y
+              por cualquier motivo.
+            </p>
+            <p>
+              Pruebe cualquier servicio de Starlink durante 30 días y, si no
+              está satisfecho, devuelva el equipo y obtenga un reembolso
+              completo.
+            </p>
+          </div>
+
+          <button>CONSULTAR DISPONIBILIDAD</button>
+        </div>
+      </div>
+
+      <div class="starlink-travel">
+        <div class="right-feature">
+          <div class="info">
+            <h1>
+              VIAJE CON<br />
+              STARLINK
+            </h1>
+
+            <div class="description-box">
+              <p>
+                Con los planes móviles de Starlink, puede llevar consigo su
+                servicio de Internet de alta velocidad y baja latencia
+                dondequiera que vaya.
+              </p>
+              <p>
+                Puede pausar y reanudar su plan según sus necesidades de viaje y
+                mantenerse conectado en cualquier lugar donde Starlink esté
+                disponible.
+              </p>
+            </div>
+
+            <button class="travel-button">OBTENER MÁS INFORMACIÓN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="left-feature">
+        <img
+          src="./assets/smarthphone.png"
+          alt=""
+          width="683px"
+          height="350px"
+        />
+        <div class="info">
+          <h1>
+            ADMINISTRE SU<br />
+            STARLINK DESDE<br />LA APP
+          </h1>
+
+          <div class="description-box">
+            <p>
+              La app de Starlink le ayuda a personalizar sus ajustes, recibir
+              actualizaciones, acceder a la sección de <a>Asistencia</a>, y ver
+              datos de rendimiento, velocidad de descarga, latencia y tiempo de
+              actividad.
+            </p>
+            <p>
+              Descarge la app para determinar la mejor ubicación de
+              configuración previo a la instalación. Starlink necesita una vista
+              clara del cielo para poder establecer conexión con los satélites.
+            </p>
+          </div>
+
+          <div class="mobile-buttons">
+            <button>DESCARGAR PARA IOS</button>
+            <button>DESCARGAR PARA ANDROID</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback">
+        <h1>OPINIONES DE CLIENTES</h1>
+
+        <div class="feedback-father">
+          <div class="three-columns">
+            <div class="opinion">
+              <p>
+                “Starlink ha tenido un impacto tremendo, donde vivo no hay
+                posibilidad de tener fibra óptica, y tener las velocidades que
+                entrega STARLINK, es algo fantástico, sin duda marcó un antes y
+                un después en nuestro grupo familiar.”
+              </p>
+              <p>-Jorge R. de Paiguano, Chile</p>
+            </div>
+
+            <div class="opinion">
+              <p>
+                “Starlink nos ha dado un cambio muy grande. Ahora puedo trabajar
+                desde casa. Con una niña de 5 meses en casa me alegro mucho que
+                puedo estar mas cerca de la familia”
+              </p>
+              <p>-Bas V. de Málaga, España</p>
+            </div>
+
+            <div class="opinion">
+              <p>
+                “Nos ha cambiado la vida positivamente a mi familia y a mi.
+                Podemos ver tv streaming, escuchar música y demás sin depender
+                de la política de uso justo que es demasiado molesto, neta una
+                de las razones por la que nos cambiamos a Starlink. Estamos muy
+                contentos con el servicio.”
+              </p>
+              <p>-Humberto A. de Oaxaca, México</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="left-feature">
+        <img src="./assets/tree.png" alt="" width="683px" height="350px" />
+        <div class="info">
+          <h1>
+            LÍDER EN<br />
+            SOSTENIBILIDAD<br />ESPACIAL
+          </h1>
+
+          <div class="description-box">
+            <p>
+              Starlink no solo lidera la industria en cuanto a innovaciones para
+              reducir el brillo de los satélites, también en la mitigación de
+              escombros orbitales, cumpliendo o superando todos los estándares
+              reglamentarios e industriales
+            </p>
+            <p>
+              Descarge la app para determinar la mejor ubicación de
+              configuración previo a la instalación. Starlink necesita una vista
+              clara del cielo para poder establecer conexión con los satélites.
+            </p>
+          </div>
+
+          <button>OBTENER MÁS INFORMACIÓN</button>
+        </div>
+      </div>
+
+      <div class="right-feature">
+        <div class="info">
+          <h1>
+            DISEÑADO POR<br />
+            SPACEX
+          </h1>
+
+          <div class="description-box">
+            <p>
+              SpaceX emplea su amplia experiencia en la construcción de cohetes
+              y naves espaciales para implementar el sistema de Internet de
+              banda ancha más avanzado del mundo. SpaceX, como proveedor líder
+              mundial de servicios de lanzamiento, y el único proveedor con un
+              cohete reutilizable de clase orbital, tiene gran experiencia tanto
+              en naves espaciales como en operaciones en órbita.
+            </p>
+          </div>
+
+          <button>OBTENER MÁS INFORMACIÓN</button>
+        </div>
+        <img src="./assets/rocket.png" alt="" width="683px" height="350px" />
+      </div>
+
+      <div class="store-cards-container" id="cardsContainer">
+
+      </div>
+
+      <footer style="background-color: black">
+        <div style="display: flex; justify-content: center">
+          <div class="line"></div>
+        </div>
+
+        <div class="register">
+          <p>¿Interesado en estar al día con Starlink?</p>
+        </div>
+
+        <div class="register-form">
+          <div class="location-form">
+            <input type="text" name="" placeholder="E-MAIL" id="" />
+            <button>INSCRIBIRSE</button>
+          </div>
+        </div>
+
+        <div class="register-form">
+          <div class="location-form">
+            <p class="policy-text">
+              Al hacer clic en Registrarse, acepta nuestra
+              <a href="https://www.starlink.com/legal" class="bold-white-link"
+                >Política de Privacidad</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-links-box">
+          <div class="footer-links">
+            <div class="footer-left">
+              <div class="footer-side-links">
+                <p class="policy-text">Starlink © 2023</p>
+              </div>
+            </div>
+
+            <div class="about-links">
+              <p>
+                <a href="https://www.spacex.com/careers"
+                  >Carreras Profesionales&nbsp;&nbsp;</a
+                >
+                |
+                <a href="https://starlink.com/satellite-operators"
+                  >&nbsp;&nbsp;Operadores de satélites&nbsp;&nbsp;</a
+                >
+                |
+                <a href="https://starlink.com/legal"
+                  >&nbsp;&nbsp;Privacidad y Legal&nbsp;&nbsp;</a
+                >
+                |
+                <a id="privacyPreferences" href="#"
+                  >&nbsp;&nbsp;Preferencias de privacidad</a
+                >
+              </p>
+            </div>
+
+            <div class="footer-side-links">
+              <p class="policy-text">
+                Starlink es una división de SpaceX. Visítenos en
+                <a href="https://www.spacex.com/" class="bold-white-text"
+                  >spacex.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyDbZg6PIq74MzjdqU7-ArDUyL-15nLB_68",
+    });
+  </script>
+  
+  <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js "></script>
+  <script src="./index.js"></script>
+</html>
